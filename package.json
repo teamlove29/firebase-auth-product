@@ -5,18 +5,42 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "npm run build && npm run export && firebase deploy"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false,
+    "child_process": false
   },
   "dependencies": {
+    "@nextui-org/react": "^1.0.0-beta.12",
+    "@reduxjs/toolkit": "^1.9.3",
+    "@tabler/icons": "^2.11.0",
     "@types/node": "18.15.7",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
+    "bcrypt": "^5.1.0",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
+    "firebase": "^9.18.0",
+    "firebase-auth": "^0.1.2",
+    "js-cookie": "^3.0.1",
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.43.7",
+    "react-redux": "^8.0.5",
+    "react-toastify": "^9.1.2",
+    "redux-persist": "^6.0.0",
     "typescript": "5.0.2"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/js-cookie": "^3.0.3",
+    "html-loader": "^4.2.0"
   }
 }
